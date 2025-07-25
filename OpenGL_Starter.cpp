@@ -131,19 +131,8 @@ int main()
         -0.5f, -0.5f, -0.5f, -0.5f, -0.5f, 0.5f, 0.5f, -0.5f, 0.5f,
         -0.5f, -0.5f, -0.5f, 0.5f, -0.5f, 0.5f, 0.5f, -0.5f, -0.5f
     };
-    /*
-    float pyriamid[] = {
-        // bottom face
-        -0.5f, -0.5f, -0.5f, -0.5f, -0.5f, 0.5f, 0.5f, -0.5f, 0.5f,
-        -0.5f, -0.5f, -0.5f, 0.5f, -0.5f, 0.5f, 0.5f, -0.5f, -0.5f
-        // upper face 1
-        -0.5f, -0.5f, -0.5f, 0.0f, 0.0f, 0.0f, 
-
-    };
-    */
 
     GLuint cubeVAO = renderVerticesToGPU(cube, sizeof(cube));
-    // GLuint pyramidVAO = renderVerticesToGPU(pyramid, sizeof(pyramid));
 
     /* ********** NOW IT'S TIME TO DECLARE THE REST OF THE DATA ********** */
 
@@ -185,9 +174,6 @@ int main()
         glClearColor(0.5f, 0.5f, 0.8f, 1.0f); //A light blue color
         glClear(GL_COLOR_BUFFER_BIT);
 
-        /* Some transformations for the cube, you can uncomment this part and see what happens
-            
-        */
         //cubeModel = glm::translate(cubeModel, glm::vec3(0.0f, 0.0f, -0.0002f));
         cubeModel = glm::rotate(cubeModel, glm::radians(0.05f), glm::vec3(0.0f, 1.0f, 0.0f));
         
